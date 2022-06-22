@@ -15,7 +15,7 @@ const posts = [
     author: {
       name: 'Paul York',
       href: '#',
-      imageUrl: SocialResponsibility,
+      imageUrl: Global,
     },
     readingTime: '6 min',
   },
