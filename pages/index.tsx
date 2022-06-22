@@ -29,14 +29,6 @@ export const Layout: React.FC<{ children: ReactNode }> = (props) => {
   console.log('router', router)
   return (
     <>
-      <style jsx>{`
-        .nav-link {
-          text-decoration: none;
-        }
-        .active:after {
-          content: ' (current page)';
-        }
-      `}</style>
       <div className='relative h-screen bg-gray-50'>
         <div
           className='hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full'
@@ -109,14 +101,14 @@ export const Layout: React.FC<{ children: ReactNode }> = (props) => {
           <Popover>
             <div className='px-4 mx-auto max-w-7xl sm:px-6'>
               <nav
-                className='relative flex items-center justify-between sm:h-10 md:justify-center'
+                className='relative flex items-center justify-between overflow-visible sm:h-10 md:justify-center'
                 aria-label='Global'>
                 <div className='flex items-center flex-1 md:absolute md:inset-y-0 md:left-0'>
                   <div className='flex items-center justify-between w-full md:w-auto'>
                     <Link href='/'>
                       <a>
                         <span className='sr-only'>Gecko Grit</span>
-                        <GeckoLogo className='w-12 h-12' />
+                        <GeckoLogo className='absolute top-0 z-20 left-5 w-14 h-14' />
                       </a>
                     </Link>
                     <div className='flex items-center -mr-2 md:hidden'>
@@ -171,7 +163,7 @@ export const Layout: React.FC<{ children: ReactNode }> = (props) => {
                       </Popover.Button>
                     </div>
                   </div>
-                  <div className='px-2 pt-2 pb-3'>
+                  <div className='px-2 pt-2 pb-6'>
                     {navigation.map((item) => (
                       <Link key={item.name} href={item.href}>
                         <a
