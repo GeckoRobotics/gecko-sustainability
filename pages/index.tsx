@@ -13,6 +13,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import type { NextPageWithLayout } from './_app'
+import Hero from '../components/Hero'
 
 const navigation = [
   { name: 'Electricity', href: '/electricity' },
@@ -36,7 +37,7 @@ export const Layout: React.FC<{ children: ReactNode }> = (props) => {
           content: ' (current page)';
         }
       `}</style>
-      <div className='relative h-screen overflow-hidden bg-gray-50'>
+      <div className='relative h-screen bg-gray-50'>
         <div
           className='hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full'
           aria-hidden='true'>
@@ -202,21 +203,25 @@ const Home: NextPageWithLayout = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {/* <main className={styles.main}>
-        <h1 className={styles.title}>GRIT</h1>
-      </main> */}
-
-      <main className='px-4 mx-auto mt-16 max-w-7xl sm:mt-24'>
+      {/* <main className='px-4 mx-auto mt-16 max-w-7xl sm:mt-24'>
         <div className='text-center'>
-          <h1 className='text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl'>
-            <span className='block xl:inline'>Sustainability</span>{' '}
-            <span className='block text-gecko_brand-600_base xl:inline'>Squad</span>
-          </h1>
-          <p className='max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl'>
+          <h1 className='text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl'> */}
+      {/* Global Responsibility Improvement Tracking */}
+      {/* <span className='block xl:inline'>Global</span>
+            <span className='block text-gecko_brand-600_base xl:inline'>
+              Responsibility
+            </span>
+            <span className='block xl:inline'>Improvement</span>
+            <span className='block text-gecko_brand-600_base xl:inline'>Tracking</span> */}
+      {/* <span className='block xl:inline'>Sustainability</span>
+            <span className='block text-gecko_brand-600_base xl:inline'>Squad</span> */}
+      {/* </h1> */}
+      {/* <p className='max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl'>
             Do you care?
-          </p>
-        </div>
-      </main>
+          </p> */}
+      {/* </div>
+      </main> */}
+      <Hero />
 
       <footer className={styles.footer}></footer>
     </div>
