@@ -2,6 +2,7 @@ import Image from 'next/image'
 import * as Global from '../assets/global.png'
 import * as Responsibility from '../assets/responsibility.jpeg'
 import * as SocialResponsibility from '../assets/social-responsibility.png'
+import * as Improvement from '../assets/improvement.png'
 
 const posts = [
   {
@@ -42,7 +43,7 @@ const posts = [
     author: {
       name: 'Easer Collins',
       href: '#',
-      imageUrl: Global,
+      imageUrl: Improvement,
     },
     readingTime: '11 min',
   },
