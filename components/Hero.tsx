@@ -3,12 +3,14 @@ import * as Global from '../assets/global.png'
 import * as Responsibility from '../assets/responsibility.jpeg'
 import * as SocialResponsibility from '../assets/social-responsibility.png'
 import * as Improvement from '../assets/improvement.png'
+import * as Res from '../assets/responsibility.jpg'
+import Link from 'next/link'
 
 const posts = [
   {
     title: 'Global',
-    href: '#',
-    category: { name: 'Global', href: '#', color: 'bg-indigo-100 text-indigo-800' },
+    href: '/global',
+    category: { name: 'Global', href: '/global', color: 'bg-indigo-100 text-indigo-800' },
     description: 'Local, sustainable, environmental initiatives',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
@@ -21,22 +23,30 @@ const posts = [
   },
   {
     title: 'Responsibility',
-    href: '#',
-    category: { name: 'Responsibility', href: '#', color: 'bg-pink-100 text-pink-800' },
+    href: '/responsibility',
+    category: {
+      name: 'Responsibility',
+      href: '/responsibility',
+      color: 'bg-pink-100 text-pink-800',
+    },
     description: 'What part can you play?',
     date: 'Mar 10, 2020',
     datetime: '2020-03-10',
     author: {
       name: 'Dessie Ryan',
       href: '#',
-      imageUrl: Responsibility,
+      imageUrl: Res,
     },
     readingTime: '4 min',
   },
   {
     title: 'Improvement',
-    href: '#',
-    category: { name: 'Improvement', href: '#', color: 'bg-green-100 text-green-800' },
+    href: '/improvement',
+    category: {
+      name: 'Improvement',
+      href: '/improvement',
+      color: 'bg-green-100 text-green-800',
+    },
     description: 'Make our future better',
     date: 'Feb 12, 2020',
     datetime: '2020-02-12',
@@ -49,8 +59,12 @@ const posts = [
   },
   {
     title: 'Tracking',
-    href: '#',
-    category: { name: 'Tracking', href: '#', color: 'bg-green-100 text-green-800' },
+    href: '/tracking',
+    category: {
+      name: 'Tracking',
+      href: '/tracking',
+      color: 'bg-green-100 text-green-800',
+    },
     description: 'Track, compete, share',
     date: 'Feb 12, 2020',
     datetime: '2020-02-12',
@@ -69,11 +83,13 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className='px-4 pt-16 pb-20 bg-gray-50 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
+    <div className='h-full px-4 pt-16 pb-20 bg-gray-50 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
       <div className='relative max-w-lg mx-auto lg:max-w-7xl'>
         <div>
-          <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
-            GRIT
+          <h2
+            style={{ lineHeight: 0 }}
+            className=' font-extrabold tracking-tight text-gray-900 font-poppins text-[85px]'>
+            G.R.I.T.
           </h2>
           {/* <p className='mt-3 text-xl text-gray-500 sm:mt-4'>
             Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa
@@ -86,18 +102,24 @@ export default function Example() {
               key={post.title}
               className='flex flex-col overflow-hidden rounded-lg shadow-lg'>
               <div className='flex-shrink-0'>
-                <Image
-                  className='object-cover w-full h-48'
-                  src={post.author.imageUrl}
-                  alt=''
-                />
+                <Link href={post.category.href}>
+                  <Image
+                    className='object-cover w-full h-32 cursor-pointer'
+                    src={post.author.imageUrl}
+                    alt=''
+                    height={'158px'}
+                    width={'305px'}
+                  />
+                </Link>
               </div>
               <div className='flex flex-col justify-between flex-1 p-6 bg-white'>
                 <div className='flex-1'>
-                  <p className='text-sm font-medium text-indigo-600'>
-                    <a href={post.category.href} className='hover:underline'>
-                      {post.category.name}
-                    </a>
+                  <p className='text-sm font-medium text-gecko_brand-600_base'>
+                    <Link href={post.category.href}>
+                      <a href={post.category.href} className='hover:underline'>
+                        {post.category.name}
+                      </a>
+                    </Link>
                   </p>
                   <a href={post.href} className='block mt-2'>
                     <p className='text-xl font-semibold text-gray-900'>{post.title}</p>
@@ -106,14 +128,12 @@ export default function Example() {
                 </div>
                 <div className='flex items-center mt-6'>
                   <div className='flex-shrink-0'>
-                    <a href={post.author.href}>
-                      <span className='sr-only'>{post.author.name}</span>
-                      {/* <Image
+                    <span className='sr-only'>{post.author.name}</span>
+                    {/* <Image
                         className='w-10 h-10 rounded-full'
                         src={post.author.imageUrl}
                         alt=''
                       /> */}
-                    </a>
                   </div>
                   {/* <div className='ml-3'>
                     <p className='text-sm font-medium text-gray-900'>

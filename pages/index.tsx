@@ -42,7 +42,7 @@ export const Layout: React.FC<{ children: ReactNode }> = (props) => {
           className='hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full'
           aria-hidden='true'>
           <div className='relative h-full mx-auto max-w-7xl'>
-            <svg
+            {/* <svg
               className='absolute transform right-full translate-y-1/4 translate-x-1/4 lg:translate-x-1/2'
               width={404}
               height={784}
@@ -101,7 +101,7 @@ export const Layout: React.FC<{ children: ReactNode }> = (props) => {
                 height={784}
                 fill='url(rgba(0,134,119,1)-b041-4d26-bec4-8d33ea57ec9b)'
               />
-            </svg>
+            </svg> */}
           </div>
         </div>
 
