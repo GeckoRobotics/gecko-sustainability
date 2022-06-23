@@ -152,6 +152,20 @@ export default function Example() {
             </div>
           ))}
         </div>
+
+        <div className='flex items-center w-full text-center'>
+          <Link
+            href={
+              'https://docs.google.com/presentation/d/1IMsI3lgC1B70EGXiLMAhEcrUNmtxfYC7mTHkS7fzvWE/edit?usp=sharing'
+            }>
+            <a
+              rel='noopener noreferrer'
+              target='_blank'
+              className='hover:text-gecko_brand-500  text-center mt-8 font-extrabold tracking-tight text-gray-900 font-poppins text-[70px] self-center '>
+              Slides{' '}
+            </a>
+          </Link>
+        </div>
         {/* <div className='grid gap-16 pt-12 mt-12 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-12'>
           {posts.map((post) => (
             <div key={post.title}>
