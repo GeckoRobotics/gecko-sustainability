@@ -4,11 +4,19 @@ const nextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-
-    return config;
+      use: ['@svgr/webpack'],
+    })
+    config.module.rules.push({
+      test: /\.pdf$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+    })
+    return config
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

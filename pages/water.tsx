@@ -4,7 +4,6 @@ const Water = () => {
   return (
     <Layout>
       <div className='flex flex-col items-center justify-center h-screen bg-gray-50'>
-        Water
         <span className='mt-8 font-extrabold tracking-tight text-gray-900 font-poppins text-8xl'>
           Operations
         </span>
