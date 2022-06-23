@@ -25,6 +25,19 @@ const Responsibility = () => {
                   </a>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href={
+                    'https://www.forbes.com/sites/afdhelaziz/2020/03/07/the-power-of-purpose-the-business-case-for-purpose-all-the-data-you-were-looking-for-pt-2/?sh=2d59dc9c3cf7'
+                  }>
+                  <a
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    className='hover:text-gecko_brand-500 '>
+                    The Power Of Purpose: The Business Case For Purpose{' '}
+                  </a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
