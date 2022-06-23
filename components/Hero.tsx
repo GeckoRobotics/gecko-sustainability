@@ -196,6 +196,40 @@ export default function Example() {
           ))}
         </div> */}
       </div>
+      <div className='text-center '>
+        <h2
+          // style={{ lineHeight: 0 }}
+          className=' mt-8 font-extrabold tracking-tight text-gray-900 font-poppins text-[70px]'>
+          Short-Term Actions
+        </h2>{' '}
+        <span></span>
+        <ul>
+          <li>Deploy signage around cross-contamination </li>
+          <li>Reduce single-use waste by using coffee mugs and the dishwashers</li>{' '}
+          <li>Standardize operating procedure to minimize water waste</li>
+          <li>
+            {' '}
+            Consider changing the standard note regarding ‘individually package and label
+            components
+          </li>{' '}
+          <li>
+            {' '}
+            Hold a ‘Sustainability Challenge’ Month - team with lowest carbon footprint
+            wins a prize
+          </li>
+        </ul>
+        <h2
+          // style={{ lineHeight: 0 }}
+          className=' mt-8 font-extrabold tracking-tight text-gray-900 font-poppins text-[70px]'>
+          Long-Term Vision
+        </h2>{' '}
+        <ul>
+          <li>Setup compost plan/process at Nova to address remaining food waste </li>
+          <li>Add logging/reporting to existing flow-meter in base station</li>{' '}
+          <li>Possibly automated on/off for water (tied to driving/inspection)</li>
+          <li> Implement sustainable travel policies</li>{' '}
+        </ul>
+      </div>
     </div>
   )
 }
