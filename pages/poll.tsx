@@ -13,7 +13,7 @@ const Poll = () => {
           <a
             rel='noopener noreferrer'
             target='_blank'
-            className='text-5xl hover:text-gecko_brand-500  mt-8 font-extrabold tracking-tight text-gray-900 font-poppins text-[70px] '>
+            className='  hover:text-gecko_brand-500  mt-8 font-extrabold tracking-tight text-gray-900 font-poppins text-[70px] '>
             Take the poll
           </a>
         </Link>
